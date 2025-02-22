@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Book your stay at the best hotels with ease. Find the perfect hotel for your next trip.">
+    <title>Book My Hotel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            transition-duration: 0.25s;
+        }
+
+        a:hover {
+            color: lightblue;
+        }
+
+        header {
+            background-color: #0f1c60;
+            color: white;
+            padding: 16px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 16px;
+        }
+
+        .nav {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            
+        }
+
+        .nav:hover {
+            background-color:  rgba(245, 223, 220, 0.5);
+            padding: 8px 10px;
+            border-radius: 20pX;
+            font-size: larger;
+            color: red;
+            
+        }
+
+        #search {
+            text-decoration: none;
+            background-color: #f1c40f;
+            border: solid organe;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: larger;
+            color: black;
+        }
+
+        #search:hover{
+            background-color: chartreuse;
+            color: #0f1c60;
+        }
+        #searchbar{
+            font-size: large;
+            border-radius:8px ;
+            width: 200px;
+        }
+        #login{
+            border: transparent;background-color:bisque ;
+            color: rgb(132, 43, 72); 
+            font-size: small;
+            padding: 4px; 
+            border-radius: 20px;
+            margin-left: 20px; 
+            text-decoration: none;
+        }
+        
+        #login:hover{
+            color: aquamarine;
+            padding: 2px 2px;
+            border-radius: 20pX;
+            border-color: red;
+            background-color: tomato;
+            font-size: larger;
+        }
+
+        .main {
+            background: url('wall.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 1000px;
+            color: white;
+            text-align: center;
+            padding: 48px 0;
+        }
+
+        .filter {
+            
+            padding: 40px;
+            background-color: rgba(245, 223, 220, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .filter ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            font-size: larger;
+            padding: 0;
+        }
+
+        .filter ul li {
+            margin: 0 10px;
+        }
+
+        .filter input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .filter select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .hotels {
+            padding: 32px;
+            text-align: center;
+        }
+
+        .hotels h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+
+        footer {
+            background-color: #0f1c60;
+            color: white;
+            text-align: center;
+            padding: 16px 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .hotel-card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            
+        }
+
+        .hotel-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hotel-card h2 {
+            font-size: 50px;
+            color: #333;
+        }
+
+        .hotel-card p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .hotel-card .price {
+            font-size: 20px;
+            color: #e91e63;
+        }
+
+        .hotel-card .status {
+            font-size: 20px;
+            color: #4caf50;
+        }
+
+        .book{
+            border: #333 solid;
+            font-size: 30px;
+            color: black;
+            padding: 0 20px;
+            border-radius: 20px;
+            transition-duration: 0.5s;
+            
+        }
+        .book:hover{
+            background: linear-gradient(red, yellow);
+        }
+    </style>
+</head>
+
+<body>
+    <header style="position: fixed; width: 100%;">
+        <nav >
+            <ul>
+                <li>
+                    <div style="position:absolute;left: 20px; top: 5px;">
+                        <h1><b style="font-family:roboto;margin-right: 10px; text-decoration-line:line-through; text-shadow: 0px 0px 10px gold; font-style: italic; border-radius: 50%; border: dashed gold; font-size: xx-large;">B</b>Book My Hotel</h1>
+                    </div>
+                </li>
+                <li><a class="nav" href="#">Home</a></li>
+                <li><a class="nav" href="#">Hotels</a></li>
+                <li><a class="nav" href="#">Offers</a></li>
+                <li><a class="nav" href="#">Contact</a></li>
+                <li><a class="nav" href="about.html" target="_blank">About</a></li>
+                <li>
+                    <div style="position: absolute;
+                    right: 50px;">
+                        <input style="padding-left: 10px;" type="text" placeholder="Search Hotels" id="searchbar"><a id="search" href="#" >Search</a>
+                        <a href="login-reg.html"target="_blank" id="login" >Login/Register</a>
+                    </div>
+                    
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!----------------------------------------------------------->
+    <main>
+        <section class="main">
+            <p style="font-family:cursive;font-size: 50px;margin-top: 200px;margin-bottom: 100px;">Find the perfect hotel <br> for your next trip.</p>
+                <div class="filter" >
+                    <ul>
+                        <li><input type="text" placeholder="City"></li>
+                        <li><input type="text" placeholder="check-in"></li>
+                        <li><input type="text" placeholder="check-out"></li>
+                        <li>
+                            <select name="type" id="">
+                            <option value="2Adults">2 Adults</option>
+                            <option value="Family">Family</option>
+                            <option value="group">Group</option>
+                            <option value="business">Business</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            
+        </section>
+
+        <section class="hotels">
+            <h2>Some Hotels near you..</h2>
+            <div class="hotel-card">
+                <img src="mewad_inn.jpeg" alt="Hotel Image">
+                <h2>Hotel Mewad Inn</h2>
+                <p class="price">Price per night: ₹1000</p>
+                <p class="status">Open</p>
+                <a class="book" href="#" >Book</a>
+                
+            </div>
+            <div class="hotel-card">
+                <img src="comfortinn.jpeg" alt="Hotel Image">
+                <h2>Hotel Comfort Inn</h2>
+                <p class="price">Price per night: ₹2000</p>
+                <p class="status">Open</p>
+                <a class="book" href="#" >Book</a>
+            </div>
+            
+            <div class="hotel-card">
+                <img src="divineheritage.jpeg" alt="Hotel Image">
+                <h2>Hotel Divine Heritage</h2>
+                <p class="price">Price per night: ₹2500</p>
+                <p class="status">Open</p>
+                <a class="book" href="#" >Book</a>
+            </div>
+            <div class="hotel-card">
+                <img src="stellar.jpeg" alt="Hotel Image">
+                <h2>Hotel Stellar</h2>
+                <p class="price">Price per night: ₹3500</p>
+                <p class="status">Open</p>
+                <a class="book" href="#" >Book</a>
+            </div>
+        </section>
+    </main>
+    <!------------------------------------------------------------------>
+    <footer>
+
+        <p>Contact us <br>
+            Email:<a href="mailto:info@bookmyhotel.com"> info@bookmyhotel.com</a></p>
+        <a class="foot" href="#">Instagram</a> |
+        <a class="foot" href="#">Facebook</a> |
+        <a class="foot" href="#">Twitter</a><br>
+        <a class="foot" href="review.html"target="_blank">Write us a review</a>
+        <p>&copy; 2025 Hotel Booking. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

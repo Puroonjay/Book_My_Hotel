@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book My Hotel - Login</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background: url('loginwall.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(151, 153, 203, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: left;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0f1c60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover{
+    background: linear-gradient(orange, yellow);
+    color: #0f1c60;
+}
+
+button[type="submit"]:active{
+    background-color: #a05945;
+}
+.register-option {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.register-option a {
+    color: #333;
+    text-decoration: none;
+}
+.register-option a:hover {
+    color: orange;
+    text-decoration: none;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div style="position:relative; top: 5px; color: #0f1c60;">
+                <h1><b style="font-family:roboto;margin-right: 10px; text-decoration-line:line-through; text-shadow: 0px 0px 10px gold; font-style: italic; border-radius: 50%; border: dashed gold; font-size: xx-large;">B</b>Book My Hotel</h1>
+            </div>
+            <form id="login-form">
+                <h2 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Login</h2>
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+                <button type="submit">Login</button>
+                <p class="register-option">Don't have an account? <a href="#">Register here</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
